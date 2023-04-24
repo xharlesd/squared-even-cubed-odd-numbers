@@ -15,6 +15,7 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
         # if the obtained integer is even
         if obtained_integer % 2 == 0:
             # obtained integer will be squared
+            squared_even = obtained_integer ** 2
             
             """"""
             # squared even numbers will be written to double.txt

@@ -19,8 +19,8 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
             # squared even numbers will be written to double.txt
             output_squared.write(str(squared_even)+ "\n")
             
-            """"""
-            
         # else if the obtained integer is odd
+        elif obtained_integer % 2 == 1:
+            """"""
             # obtained integer will be tripled
             # cubed odd numbers will be written to double.txt

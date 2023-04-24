@@ -4,6 +4,8 @@
 # The extracted even numbers will be squared and the odd numbers will be cubed. The result will be transferred to separate files.
 
 # open integers.txt (read), double.txt(write), triple.txt(write)
+with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_even,  open("triple.txt", 'w') as output_odd:
+    """"""
 # read integers.txt line by line
 # convert each line from integers.txt into integer
 # if the extracted number is even

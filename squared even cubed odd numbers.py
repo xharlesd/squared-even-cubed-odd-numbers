@@ -12,4 +12,3 @@
 # else if the extracted number is odd
     # extracted number will be tripled
     # cubed odd numbers will be written to double.txt
-    # cubed odd numbers will be written to odd.txt

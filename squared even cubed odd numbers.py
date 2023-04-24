@@ -8,13 +8,16 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
     
     # read integers.txt line by line
     for line in input_file:
-        """"""
+        
         # convert each line from integers.txt into integer
         obtained_integer = int(line)
-        
-        # if the extracted number is even
-            # extracted number will be squared
+
+        # if the obtained integer is even
+        if obtained_integer % 2 == 0:
+            # obtained integer will be squared
+            
+            """"""
             # squared even numbers will be written to double.txt
-        # else if the extracted number is odd
-            # extracted number will be tripled
+        # else if the obtained integer is odd
+            # obtained integer will be tripled
             # cubed odd numbers will be written to double.txt

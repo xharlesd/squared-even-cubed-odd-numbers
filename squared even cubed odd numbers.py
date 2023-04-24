@@ -10,6 +10,8 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
     for line in input_file:
         """"""
         # convert each line from integers.txt into integer
+        obtained_integer = int(line)
+        
         # if the extracted number is even
             # extracted number will be squared
             # squared even numbers will be written to double.txt

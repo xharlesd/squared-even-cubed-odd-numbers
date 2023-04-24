@@ -22,7 +22,7 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
         # else if the obtained integer is odd
         elif obtained_integer % 2 == 1:
             # obtained integer will be cubed
-            squared_even = obtained_integer ** 3
+            cubed_odd = obtained_integer ** 3
 
             # cubed odd numbers will be written to double.txt
-            output_cubed.write(str(obtained_integer)+ "\n")
+            output_cubed.write(str(cubed_odd)+ "\n")

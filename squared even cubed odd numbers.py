@@ -21,6 +21,7 @@ with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_
             
         # else if the obtained integer is odd
         elif obtained_integer % 2 == 1:
-            """"""
-            # obtained integer will be tripled
+            # obtained integer will be cubed
+            squared_even = obtained_integer ** 3
+            
             # cubed odd numbers will be written to double.txt

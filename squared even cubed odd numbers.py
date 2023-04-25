@@ -11,21 +11,21 @@ def user_input():
         while True:
             try:
                 # user input
-                user_input = input("Enter a Number:  ")
+                user_input = int(input("Enter a Number:  "))
                 
                 # if input is integer
-                if user_input.strip().isnumeric():
-                    # user input will be written to numbers.txt
+                if user_input <= 0 or user_input >= 0:
+                    # user input will be written to integers.txt
                     input_file1.write(str(user_input) + '\n')
-                    continue
+                    break
                     """
                 
 
 
                     """
             except:
-                """
-                """
+                print("error")
+                
 
 def main():
 # open integers.txt (read), double.txt(write), triple.txt(write)

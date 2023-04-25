@@ -12,14 +12,14 @@ def intro():
     # Use pyfiglet formatting to Assignment # 4"
     print("")
     lab = pyfiglet.figlet_format("SQ.EVEN, C.ODD", font = "banner3-d", width = 130, justify = "center")
-    print(Style.BRIGHT + Fore.CYAN + lab)
+    print(Style.BRIGHT + Fore.YELLOW + lab)
 
     # format introductory message
-    print("\033[0;34m" + "\033[1m-" * 130 + '\033[0m')
+    print(Fore.YELLOW + "\033[1m-" * 130 + '\033[0m')
     intro = "INSTRUCTION: PLEASE INPUT INTEGERS ONLY. TYPE ANY LETTER OR SYMBOL TO STOP." 
     intro_centered = intro.center(130)
     print( "\033[1m" + intro_centered) 
-    print("\033[0;34m" + "\033[1m-" * 130 + '\033[0m' + "\n")
+    print(Fore.YELLOW + "\033[1m-" * 130 + '\033[0m' + "\n")
 
     # insert time delay
     time.sleep(1.5)
@@ -31,7 +31,7 @@ def user_input():
         while True:
             try:
                 # request for user input
-                user_input = int(input("Enter a Number:  "))
+                user_input = int(input(Fore.GREEN + "\033[1m\t\t\tEnter a Number:  \033[0m"  + Fore.YELLOW))
                 
                 # if input is integer
                 if user_input <= 0 or user_input >= 0:
@@ -40,7 +40,8 @@ def user_input():
                     continue
 
             except:
-                print("\nFinding the square of even numbers and the cube of odd numbers.....")
+                print(Fore.MAGENTA + "\n\t\t\t[Finding the square of even numbers and the cube of odd numbers.......]")
+                time.sleep(3)
                 break
   
 def main():
@@ -74,19 +75,32 @@ def output():
         # print list of integers
         lst_integers = [int(line) for line in input_file2.read().split()]
         lst_integers.sort()
-        print("\nINTEGERS:             ", lst_integers)
+        print(Fore.BLUE + "\033[1m\n\n\t\t\tINTEGERS:             \033[0m" + Fore.CYAN, lst_integers)
 
         # print list of squared even numbers
         lst_squared = [int(line) for line in output_squared2.read().split()]
         lst_squared.sort()
-        print("SQUARED EVEN NUMBERS: ", lst_squared)
+        print(Fore.BLUE + "\033[1m\t\t\tSQUARED EVEN NUMBERS: \033[0m" + Fore.CYAN, lst_squared)
 
         # print list of squared even numbers
         lst_cubed = [int(line) for line in output_cubed2.read().split()]
         lst_cubed.sort()
-        print("CUBED ODD NUMBERS:    ", lst_cubed, "\n")
+        print(Fore.BLUE + "\033[1m\t\t\tCUBED ODD NUMBERS:    \033[0m"+ Fore.CYAN, lst_cubed, "\n")
 
+def outro():
+    time.sleep(3.5)
+    print(Fore.MAGENTA + "\n\t\t\t[Program will be terminated..............]" + "\n")
+    time.sleep(2)
+    
+    print(Fore.YELLOW + "\033[1m-" * 130 + '\033[0m')
+    print(" ")
+    lab = pyfiglet.figlet_format("   THANK YOU!   ", font = "banner3",  width = 130, justify = "center")
+    print(Style.BRIGHT + Fore.YELLOW + lab)
+    exit()
+
+# start
 intro()
 user_input()
 main()
 output()
+outro()

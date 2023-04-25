@@ -15,7 +15,9 @@ def user_input():
                 
                 # if input is integer
                 if user_input.strip().isnumeric():
-                    
+                    # user input will be written to numbers.txt
+                    input_file1.write(str(user_input) + '\n')
+                    continue
                     """
                 
 

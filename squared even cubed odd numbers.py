@@ -7,8 +7,10 @@
 def user_input():
     # open integers.txt (write)
     with open("integers.txt", 'w') as input_file1:  
-        """
-        """
+        # while loop
+        while True:
+            """
+            """
 
 def main():
 # open integers.txt (read), double.txt(write), triple.txt(write)

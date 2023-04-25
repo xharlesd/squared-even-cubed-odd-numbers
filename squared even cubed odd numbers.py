@@ -11,7 +11,7 @@ def user_input():
         while True:
             try:
                 # user input
-                user_input = int("Enter a Number:  ")
+                user_input = int(input("Enter a Number:  "))
                 """
 
 

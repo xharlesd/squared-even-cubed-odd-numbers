@@ -10,7 +10,11 @@ def user_input():
         # while loop
         while True:
             try:
+                # user input
+                user_input = int("Enter a Number:  ")
                 """
+
+
                 """
             except:
                 """

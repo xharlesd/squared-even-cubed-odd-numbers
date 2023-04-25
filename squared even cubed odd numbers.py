@@ -52,8 +52,9 @@ def output():
     # open integers.txt (read), double.txt(read), triple.txt(read)
     with open("integers.txt", 'r') as input_file2, open("double.txt", 'w') as output_squared2,  open("triple.txt", 'w') as output_cubed2:
         # print list of integers
-        lst_numbers = [int(line) for line in input_file2.read().split()]
-        lst_numbers.sort()
+        lst_integers = [int(line) for line in input_file2.read().split()]
+        lst_integers.sort()
+        print("INTEGERS: ", lst_integers)
         """"""
 
 

@@ -17,14 +17,11 @@ def user_input():
                 if user_input <= 0 or user_input >= 0:
                     # user input will be written to integers.txt
                     input_file1.write(str(user_input) + '\n')
-                    break
-                    """
-                
+                    continue
 
-
-                    """
             except:
-                print("error")
+                print("Finding the square of even and the cube of odd numbers.....")
+                break
                 
 
 def main():

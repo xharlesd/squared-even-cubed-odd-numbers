@@ -59,7 +59,7 @@ def output():
         # print list of squared even numbers
         lst_squared = [int(line) for line in output_squared2.read().split()]
         lst_squared.sort()
-        print("SQUARED EVEN NUMBERS: ", lst_integers)
+        print("SQUARED EVEN NUMBERS: ", lst_squared)
         """"""
 
 

@@ -60,6 +60,11 @@ def output():
         lst_squared = [int(line) for line in output_squared2.read().split()]
         lst_squared.sort()
         print("SQUARED EVEN NUMBERS: ", lst_squared)
+
+        # print list of squared even numbers
+        lst_cubed = [int(line) for line in output_cubed2.read().split()]
+        lst_cubed.sort()
+        print("CUBED ODD NUMBERS: ", lst_cubed)
         """"""
 
 

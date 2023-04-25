@@ -3,6 +3,10 @@
 # This program reads a text file that contains a set of numbers. Then, the even and odd numbers will be obtained from the text file. 
 # The extracted even numbers will be squared and the odd numbers will be cubed. The result will be transferred to separate files.
 
+# import modules
+import time
+import pyfiglet
+from colorama import Fore, Style
 
 def user_input():
     # open integers.txt (write)
@@ -64,7 +68,7 @@ def output():
         # print list of squared even numbers
         lst_cubed = [int(line) for line in output_cubed2.read().split()]
         lst_cubed.sort()
-        print("CUBED ODD NUMBERS:    ", lst_cubed)
+        print("CUBED ODD NUMBERS:    ", lst_cubed, "\n")
 
 
 user_input()

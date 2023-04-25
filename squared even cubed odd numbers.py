@@ -24,6 +24,7 @@ def intro():
     # insert time delay
     time.sleep(1.5)
 
+
 def user_input():
     # open integers.txt (write)
     with open("integers.txt", 'w') as input_file:  
@@ -44,6 +45,7 @@ def user_input():
                 time.sleep(3)
                 break
   
+
 def main():
     # open integers.txt (read), double.txt(write), triple.txt(write)
     with open("integers.txt", 'r') as input_file1, open("double.txt", 'w') as output_squared1,  open("triple.txt", 'w') as output_cubed1:
@@ -69,6 +71,7 @@ def main():
                 # cubed odd numbers will be written to double.txt
                 output_cubed1.write(str(cubed_odd) + "\n")
 
+
 def output():
     # open integers.txt (read), double.txt(read), triple.txt(read)
     with open("integers.txt", 'r') as input_file2, open("double.txt", 'r') as output_squared2,  open("triple.txt", 'r') as output_cubed2:
@@ -87,6 +90,7 @@ def output():
         lst_cubed.sort()
         print(Fore.BLUE + "\033[1m\t\t\tCUBED ODD NUMBERS:    \033[0m"+ Fore.CYAN, lst_cubed, "\n")
 
+
 def outro():
     time.sleep(3.5)
     print(Fore.MAGENTA + "\n\t\t\t[Program will be terminated..............]" + "\n")
@@ -97,6 +101,7 @@ def outro():
     lab = pyfiglet.figlet_format("   THANK YOU!   ", font = "banner3",  width = 130, justify = "center")
     print(Style.BRIGHT + Fore.YELLOW + lab)
     exit()
+
 
 # start
 intro()

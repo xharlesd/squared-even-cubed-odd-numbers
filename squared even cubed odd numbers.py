@@ -8,6 +8,22 @@ import time
 import pyfiglet
 from colorama import Fore, Style
 
+def intro():
+    # Use pyfiglet formatting to Assignment # 4"
+    print("")
+    lab = pyfiglet.figlet_format("SQ.EVEN, C.ODD", font = "banner3-d", width = 130, justify = "center")
+    print(Style.BRIGHT + Fore.CYAN + lab)
+
+    # format introductory message
+    print("\033[0;34m" + "\033[1m-" * 130 + '\033[0m')
+    intro = "INSTRUCTION: PLEASE INPUT INTEGERS ONLY. TYPE ANY LETTER OR SYMBOL TO STOP." 
+    intro_centered = intro.center(130)
+    print( "\033[1m" + intro_centered) 
+    print("\033[0;34m" + "\033[1m-" * 130 + '\033[0m' + "\n")
+
+    # insert time delay
+    time.sleep(1.5)
+
 def user_input():
     # open integers.txt (write)
     with open("integers.txt", 'w') as input_file:  
@@ -70,7 +86,7 @@ def output():
         lst_cubed.sort()
         print("CUBED ODD NUMBERS:    ", lst_cubed, "\n")
 
-
+intro()
 user_input()
 main()
 output()

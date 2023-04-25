@@ -3,26 +3,35 @@
 # This program reads a text file that contains a set of numbers. Then, the even and odd numbers will be obtained from the text file. 
 # The extracted even numbers will be squared and the odd numbers will be cubed. The result will be transferred to separate files.
 
+# request for user input
+def user_input():
+    """
+    """
+
+def main():
 # open integers.txt (read), double.txt(write), triple.txt(write)
-with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_squared,  open("triple.txt", 'w') as output_cubed:
-    
-    # read integers.txt line by line
-    for line in input_file:
+    with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_squared,  open("triple.txt", 'w') as output_cubed:
         
-        # convert each line from integers.txt into integer
-        obtained_integer = int(line)
-
-        # if the obtained integer is even
-        if obtained_integer % 2 == 0:
-            # obtained integer will be squared
-            squared_even = obtained_integer ** 2
-            # squared even numbers will be written to double.txt
-            output_squared.write(str(squared_even)+ "\n")
+        # read integers.txt line by line
+        for line in input_file:
             
-        # else if the obtained integer is odd
-        elif obtained_integer % 2 == 1:
-            # obtained integer will be cubed
-            cubed_odd = obtained_integer ** 3
+            # convert each line from integers.txt into integer
+            obtained_integer = int(line)
 
-            # cubed odd numbers will be written to double.txt
-            output_cubed.write(str(cubed_odd)+ "\n")
+            # if the obtained integer is even
+            if obtained_integer % 2 == 0:
+                # obtained integer will be squared
+                squared_even = obtained_integer ** 2
+                # squared even numbers will be written to double.txt
+                output_squared.write(str(squared_even)+ "\n")
+                
+            # else if the obtained integer is odd
+            elif obtained_integer % 2 == 1:
+                # obtained integer will be cubed
+                cubed_odd = obtained_integer ** 3
+
+                # cubed odd numbers will be written to double.txt
+                output_cubed.write(str(cubed_odd)+ "\n")
+
+user_input()
+main()

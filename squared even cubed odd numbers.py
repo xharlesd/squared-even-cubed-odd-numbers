@@ -9,8 +9,12 @@ def user_input():
     with open("integers.txt", 'w') as input_file1:  
         # while loop
         while True:
-            """
-            """
+            try:
+                """
+                """
+            except:
+                """
+                """
 
 def main():
 # open integers.txt (read), double.txt(write), triple.txt(write)

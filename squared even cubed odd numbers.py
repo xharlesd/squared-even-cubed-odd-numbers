@@ -5,8 +5,10 @@
 
 # request for user input
 def user_input():
-    """
-    """
+    # open integers.txt (write)
+    with open("integers.txt", 'w') as input_file1:  
+        """
+        """
 
 def main():
 # open integers.txt (read), double.txt(write), triple.txt(write)

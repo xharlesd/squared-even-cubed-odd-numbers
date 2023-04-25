@@ -6,7 +6,7 @@
 
 def user_input():
     # open integers.txt (write)
-    with open("integers.txt", 'w') as input_file1:  
+    with open("integers.txt", 'w') as input_file:  
         # while loop
         while True:
             try:
@@ -16,7 +16,7 @@ def user_input():
                 # if input is integer
                 if user_input <= 0 or user_input >= 0:
                     # user input will be written to integers.txt
-                    input_file1.write(str(user_input) + '\n')
+                    input_file.write(str(user_input) + '\n')
                     continue
 
             except:
@@ -49,8 +49,9 @@ def main():
                 output_cubed1.write(str(cubed_odd) + "\n")
 
 def output():
-    # open numbers.txt (read), even.txt(read), odd.txt(read)
-    """"""
+    # open integers.txt (read), double.txt(read), triple.txt(read)
+    with open("integers.txt", 'r') as input_file2, open("double.txt", 'w') as output_squared2,  open("triple.txt", 'w') as output_cubed2:
+        """"""
 
 
 user_input()

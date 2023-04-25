@@ -25,10 +25,10 @@ def user_input():
   
 def main():
     # open integers.txt (read), double.txt(write), triple.txt(write)
-    with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_squared,  open("triple.txt", 'w') as output_cubed:
+    with open("integers.txt", 'r') as input_file1, open("double.txt", 'w') as output_squared1,  open("triple.txt", 'w') as output_cubed1:
         
         # read integers.txt line by line
-        for line in input_file:
+        for line in input_file1:
             
             # convert each line from integers.txt into integer
             obtained_integer = int(line)
@@ -38,7 +38,7 @@ def main():
                 # obtained integer will be squared
                 squared_even = obtained_integer ** 2
                 # squared even numbers will be written to double.txt
-                output_squared.write(str(squared_even)+ "\n")
+                output_squared1.write(str(squared_even) + "\n")
                 
             # else if the obtained integer is odd
             elif obtained_integer % 2 == 1:
@@ -46,7 +46,7 @@ def main():
                 cubed_odd = obtained_integer ** 3
 
                 # cubed odd numbers will be written to double.txt
-                output_cubed.write(str(cubed_odd)+ "\n")
+                output_cubed1.write(str(cubed_odd) + "\n")
 
 def output():
     # open numbers.txt (read), even.txt(read), odd.txt(read)

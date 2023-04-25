@@ -3,14 +3,14 @@
 # This program reads a text file that contains a set of numbers. Then, the even and odd numbers will be obtained from the text file. 
 # The extracted even numbers will be squared and the odd numbers will be cubed. The result will be transferred to separate files.
 
-# request for user input
+
 def user_input():
     # open integers.txt (write)
     with open("integers.txt", 'w') as input_file1:  
         # while loop
         while True:
             try:
-                # user input
+                # request for user input
                 user_input = int(input("Enter a Number:  "))
                 
                 # if input is integer
@@ -20,12 +20,11 @@ def user_input():
                     continue
 
             except:
-                print("Finding the square of even and the cube of odd numbers.....")
+                print("Finding the square of even numbers and the cube of odd numbers.....")
                 break
-                
-
+  
 def main():
-# open integers.txt (read), double.txt(write), triple.txt(write)
+    # open integers.txt (read), double.txt(write), triple.txt(write)
     with open("integers.txt", 'r') as input_file, open("double.txt", 'w') as output_squared,  open("triple.txt", 'w') as output_cubed:
         
         # read integers.txt line by line
@@ -48,6 +47,11 @@ def main():
 
                 # cubed odd numbers will be written to double.txt
                 output_cubed.write(str(cubed_odd)+ "\n")
+
+def output():
+    # open numbers.txt (read), even.txt(read), odd.txt(read)
+    """"""
+
 
 user_input()
 main()

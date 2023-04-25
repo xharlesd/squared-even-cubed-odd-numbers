@@ -55,6 +55,11 @@ def output():
         lst_integers = [int(line) for line in input_file2.read().split()]
         lst_integers.sort()
         print("INTEGERS: ", lst_integers)
+
+        # print list of squared even numbers
+        lst_squared = [int(line) for line in output_squared2.read().split()]
+        lst_squared.sort()
+        print("SQUARED EVEN NUMBERS: ", lst_integers)
         """"""
 
 

@@ -20,7 +20,7 @@ def user_input():
                     continue
 
             except:
-                print("Finding the square of even numbers and the cube of odd numbers.....")
+                print("\nFinding the square of even numbers and the cube of odd numbers.....")
                 break
   
 def main():
@@ -50,11 +50,11 @@ def main():
 
 def output():
     # open integers.txt (read), double.txt(read), triple.txt(read)
-    with open("integers.txt", 'r') as input_file2, open("double.txt", 'w') as output_squared2,  open("triple.txt", 'w') as output_cubed2:
+    with open("integers.txt", 'r') as input_file2, open("double.txt", 'r') as output_squared2,  open("triple.txt", 'r') as output_cubed2:
         # print list of integers
         lst_integers = [int(line) for line in input_file2.read().split()]
         lst_integers.sort()
-        print("INTEGERS: ", lst_integers)
+        print("\nINTEGERS:             ", lst_integers)
 
         # print list of squared even numbers
         lst_squared = [int(line) for line in output_squared2.read().split()]
@@ -64,9 +64,9 @@ def output():
         # print list of squared even numbers
         lst_cubed = [int(line) for line in output_cubed2.read().split()]
         lst_cubed.sort()
-        print("CUBED ODD NUMBERS: ", lst_cubed)
-        """"""
+        print("CUBED ODD NUMBERS:    ", lst_cubed)
 
 
 user_input()
 main()
+output()
